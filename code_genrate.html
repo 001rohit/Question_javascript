@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            flex-direction: column;
+          }
+          #root{
+            font-size: 2rem;
+          }
+           #btn{
+            padding: 15px;
+            font-size:20px;
+            border-radius:20px;
+            border:none;
+            background: #000;
+            color: white;
+            cursor: pointer;
+           }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <button id="btn">Random Code Genrate</button>
+    <script>
+        let root = document.getElementById("root")
+        let btn = document.getElementById("btn")
+        let val="";
+        let randomCode;
+        let code=" 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz@#$%&"
+        btn.addEventListener("click",()=>{
+            for(let i=0;i<6;i++){
+                randomCode = code[Math.floor(Math.random()*code.length)]
+                val += randomCode+"_"     
+            }
+            root.textContent =  `${val}`
+            root.style.border="1px solid black"
+            root.style.padding = "10px"
+            root.style.margin = "10px"
+        })
+    </script>
+</body>
+</html>
