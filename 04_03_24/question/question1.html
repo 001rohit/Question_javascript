@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- take two number from user and print the sum of those numbers -->
+    <div id="root"></div>
+    <script>
+        let a1 = parseInt(prompt("Enter first number: "))
+        let a2 = parseInt(prompt("Enter second number: "))
+        let root = document.getElementById("root")
+        let sum = a1+a2
+        root.innerHTML = `${a1}+${a2} = ${sum}`
+
+    </script>
+</body>
+</html>

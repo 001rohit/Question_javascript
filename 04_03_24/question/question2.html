@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- take 5 marks of student input andd print the average marks and percentage-->
+    <div id="root"></div>
+    <script>
+        let b = []
+        let c = 0;
+     for(let i=1;i<=5;i++){
+        let a = parseInt(prompt("Enter your marks: "))
+        document.write("Marks"+" "+i+" = "+a+"<br>")
+        b.push(a)
+        c+=a
+     }
+     document.write("Total marks "+c+"<br>")
+     document.write("Average marks "+c/5)
+    //  document.write(c/5)
+    //  console.log(b);
+       
+    </script>
+</body>
+</html>

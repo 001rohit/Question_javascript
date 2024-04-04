@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--print the grades of the student according to the give marks-->
+    <!-- 1 90-100 = A -->
+    <!-- 2 80 - 89 = B -->
+    <!-- 2 70 - 79 = c -->
+    <!-- 2 60 - 69 = D -->
+    <!-- 2 50 - 59 = E -->
+    <!-- 2 40 - 49 = F -->
+    <!-- 2 0 - 39 = Fail -->
+    <div id="root"></div>
+    <script>
+        let marks = parseInt(prompt("Enter first number: "))
+ 
+        if(marks>=0 && marks<40){
+            document.write("Fail")
+        }
+        else if(marks>=40 && marks<50){
+            document.write("F")
+        }
+        else if(marks>=40 && marks<50){
+            document.write("E")
+        }
+        else if(marks>=50 && marks<60){
+            document.write("D")
+        }
+        else if(marks>=60 && marks<70){
+            document.write("C")
+        }
+        else if(marks>=70 && marks<80){
+            document.write("B")
+        }
+        else if(marks>=90 && marks<100){
+            document.write("A")
+        }
+        else{
+            document.write("Please enter valid marks")
+        }
+
+        
+
+    </script>
+</body>
+</html>
