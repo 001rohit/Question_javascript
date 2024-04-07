@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+        }
+        .wrapper{
+            width:450px;
+            height:300px;
+            border: 1px solid black;
+            display: flex;
+        }
+        #user,.user{
+            margin-top:25px;
+            margin-left:15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            width:200px;
+            height:250px;
+            transition: all 0.5s;
+        }
+        #user:active{
+            background:"lime";
+            transform: scale(0.8);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="user">user</div>
+        <div class="user" id="syst">system</div>
+    </div>
+    <script>
+        let user = document.getElementById("user")
+        let syst = document.getElementById("syst")
+        let userNum1;
+        let randomNum;
+        user.addEventListener("click",()=>{
+            user1()
+            systNum()
+            condition1()
+        })
+        function user1(){
+            userNum1 = prompt("Enter the number (1 to10): ")
+            if(userNum1<0 || userNum1>10){
+                // alert("Please Enter valid number(1 to 10):")
+                user.innerHTML = "User Number is not valid .Choose number(1 to 10) "
+
+            }
+            else if(userNum1>0  && userNum1<11){
+                userNum1 = Number(userNum1)    
+                user.innerHTML = "User Number is :"+userNum1
+            }
+        }
+        function systNum(){
+            randomNum = Math.floor(Math.random()*10+1)
+            alert(randomNum)
+            syst.innerHTML = "System Number is: "+randomNum
+        }
+        function condition1(){
+            if(userNum1<0 && userNum1>10){
+          alert("Please Enter valid number(1 to 10):")
+        }
+    else{
+        if(userNum1>randomNum){
+            alert("oops your number is high.Enter lower number")
+        }
+        else if(userNum1<randomNum){
+           alert("oops your number is lowe.Enter high number")
+        }
+        else{
+            alert("congratulation 🤗 your number is matched")
+        }
+    }
+        }
+    
+        
+    </script>
+</body>
+</html>
