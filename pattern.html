@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            font-size:2rem;
+            background: #000;
+            color: white;
+            animation: animate 0.5s infinite;
+        }
+        /* @keyframes animate {
+            15%{
+                color:red
+            }
+            50%{
+                color: lime;
+            }
+            100%{
+                color: brown;
+            }
+        } */
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+           let root = document.getElementById("root")
+           let div = document.createElement("div");
+        //    for(let i=1;i<=5;i++){
+        //        let p = document.createElement("p");
+        //        let s = " "
+               
+        //        for(let j=1;j<i;j++){
+        //         s += j + " ";
+        //     }
+        //     document.write(s,"<br>")
+        //     p.innerText = s;
+        //     div.appendChild(p);
+        // }
+        // root.appendChild(div)
+
+        // for(let i=1;i<=5;i++){
+        //     let s=""
+        //     for(let j=i;j>0;j--){
+        //         s +=i+" "    
+        //     }
+        //     document.write(s +"<br>")
+        // }
+        //     console.log(s);
+
+        //   let s2;
+        //   for(let j=4;j>=1;j--){
+        //       s2 =""
+        // for(let i=j;i>=1;i--){
+        //         s2+=j+" "
+        //     }
+        //     document.write(s2+"<br>")
+        // }
+
+        // let s1;
+        //   for(let j=5;j>=1;j--){
+        //       s1 =""
+        // for(let i=j;i>=1;i--){
+        //         s1+=i+" "
+        //     }
+        //     document.write(s1+"<br>")
+        // }
+
+        // let s;
+        //   for(let j=5;j>=1;j--){
+        //       s =""
+        // for(let i=1;i<=j;i++){
+        //         s+=i+" "
+        //     }
+        //     document.write(s+"<br>")
+        // }
+
+        // let x;
+        // x=""
+        // for(let i=5;i>=1;i--){
+        //     for(let a=5;a>=i;a--){
+        //         for(let j=0;j<1;j++){
+        //             // for(let a=j;a>=1;a--){
+        //             // }
+        //             x+="* "
+        //         }
+        //     }
+        //     document.write(x+"<br>")
+        // }
+       function pattern(rows){
+        for(let i=0;i<rows;i++){
+            let stars ="";
+            
+            for(let k=0;k<rows-i;k++){
+                stars+="*";
+            }
+            document.write(stars+"<br>")
+        }
+       }
+       pattern(5)
+
+    </script>
+</body>
+</html>
