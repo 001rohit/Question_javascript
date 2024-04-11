@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+        }
+        #root{
+            width:300px;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        img{
+            width:100%;
+        }
+        h1,p,h3{
+            margin:0;
+        }
+        p{
+            text-transform: uppercase;
+            color: brown;
+            font-weight: bold;
+        }
+        span{
+            text-transform: capitalize;
+        }
+        .detail{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h3{
+            margin-left:10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+`<body>
+    <div class="wrapper">
+        <div id="root">
+            <img src="" alt="" id="img_box">
+            <p>title: <span id="title1"></span></p>
+            <div class="detail">
+                <h3>id: <span id="id"></span></h3>
+                <h3 >price: <span id="price"></span></h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        // let image = document.getElementById("img_box");
+        // let Price = document.getElementById("price");
+        // console.log("Hello");
+        
+        // let title1 = document.getElementById("title1")
+        // let id1 = document.getElementById("id")
+        // fetch("https://fakestoreapi.com/products")
+        // .then((data)=>data = data.json())
+        // .then(response =>{
+        //     data1 = response[1];
+        //     console.log(data1)
+        //    let img_src = data1.image;
+        //    let price = data1.price;
+        //    let id = data1.id
+        //     image.src = img_src;
+        //     id1.innerText = id;
+        //     title1.innerHTML = data1.title
+        // let imageData = response.forEach(element => {
+        //     console.log(element.image); 
+        //     image.src = element.image
+        //         Price.innerText = element.Price;
+        //         id1.innerText = element.id;
+        // });
+        // console.log(imageData);
+        // })
+        // .catch(()=>{
+        //     alert("Some Error Occured")
+        // })
+ 
+        
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-direction: column; */
+        }
+        .box{
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #root{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+        .img1{
+            border: 1px solid black;       
+            margin:10px;
+            padding: 10px;    
+        }
+        img{
+            width:200px;
+        }
+        .btn2{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="root">
+        </div>
+    </div>
+    <script>
+        let root= document.getElementById("root")
+        let btn = document.getElementById("btn")
+        let box1 = document.createElement("div")
+        box1.className = "box1"
+        fetch("https://fakestoreapi.com/products")
+        .then((data)=>data.json()).then((mess)=>{
+            console.log(mess);
+            mess.forEach(element => {
+                let div = document.createElement("img")
+                let btn1 = document.createElement("button")
+                btn1.className = "btn2"
+                div.src=element.image
+                div.className = "img1"
+                btn1.innerHTML = "buy now"
+                // btn.appendChild(btn1)
+                root.appendChild(div)
+                root.appendChild(btn1)
+                // box1.appendChild(root)
+            });
+        }).catch((error)=>console.log("some technical issue"))
+
+    </script>
+</body>
+</html>
