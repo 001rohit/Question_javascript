@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array question</title>
+</head>
+<body>
+    <div id="root"></div>
+      <script>
+        // 1) Find the minimum and maximum element in an array
+        // 2) Write a program to reverse the array
+        // 3) Find the occurrence of an integer in the array
+        // 4) Move all the negative elements to one side of the array
+        // 5) Find duplicates in an array
+        // 6) Find the first non-repeating element in a given array of integers
+
+        // let arr=[]
+        // let val = parseInt(prompt("find length in array: "))
+        // let add;
+        // for(let i=1;i<=val;i++){
+        //       add = parseInt(prompt("Enter the value in array: "))
+        //       arr.push(add)
+        // }
+        // console.log(arr);
+
+        // let max =arr[0]
+        // for(let i=0;i<arr.length;i++){
+        //     if(arr[i]>max){
+        //         max = arr[i]
+        //     }
+        // }
+
+        // console.log("Max value :"+max);
+
+        // let min =arr[0]
+        // for(let i=0;i<arr.length;i++){
+        //     if(arr[i]<min){
+        //         min = arr[i]
+        //     }
+        // }
+        // console.log("min value: "+min);
+
+        // 2) Write a program to reverse the array
+        // let array = [2,3,4,5,6,7]
+        // let reverse=[];
+        // for(let i=array.length-1;i>=0;i--){
+        //     reverse.push(array[i])
+        // }
+        // console.log(reverse);
+
+        // 3) Find the occurrence of an integer in the array
+
+        // function myfunction(num,...arr){
+        //     let count=0;
+        //     for(let i=0;i<arr.length;i++){
+        //         if(num===arr[i]){
+        //             count +=1;
+        //         }
+        //     }
+        //     console.log(count);
+        // }
+
+        // let array1 = [1,3,5,6,5,7,4,5,5,7,7,7,5,5]
+        // myfunction(5,...array1)
+
+        // 4) Move all the negative elements to one side of the array
+        //   let arr1=[-2,-4,0,3,4,5,-3]
+        //   console.log(arr1.sort());
+
+        // max = arr1[0]
+        // let arr2=[]
+        // for(let i=0;i<arr1.length;i++){
+        //     if(arr1[i]>=max){
+        //         arr2.push(arr1[i])
+        //     }
+        // }
+        // console.log(arr2);
+
+        // 5) Find duplicates in an array
+        function duplicate(num,...arr){
+            let duplicate=0;
+            for(let i=0;i<arr.length;i++){
+               if(arr[i]==num){
+                duplicate+=1
+               }
+            }
+            // console.log(arr[i]);
+            return duplicate;
+        }
+        
+        let arr5 = [2,3,4,5,6]
+      let res =  duplicate(5,...arr5)
+
+      if(res=2){
+            console.log("This number is duplicate");
+        }
+        else{
+            console.log("This number is not duplicate");
+        }
+      </script>
+</body>
+</html>
