@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            flex-direction: column;
+        }
+        #root{
+            font-size: 3rem;
+            margin:20px;
+        }
+          .btn{
+            display: flex;
+        }
+        button{
+              font-size:20px;
+              margin:0 5px;
+              padding: 10px;
+              border-radius: 10px;
+              border: none;
+              font-weight:bold;
+              background: black;
+              color: white;
+              cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+    <div id="root">0</div>
+    <div class="btn">
+        <button id="btn1">increment</button>
+        <button id="btn2">reset</button>
+        <button id="btn3">decreament</button>
+    </div>
+    <script>
+        let root = document.getElementById("root")
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let count=0;
+        
+        btn1.addEventListener("click",()=>{
+          count++;
+          root.innerHTML = count;
+        })
+
+        btn2.addEventListener("click",()=>{
+           root.innerHTML = 0
+        })
+        
+        btn3.addEventListener("click",()=>{
+          count--;
+          root.innerHTML = count
+        })
+    </script>
+</body>
+</html>
