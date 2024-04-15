@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+      let array1 = [2,3,4,5,1,6,4];
+  
+    //   find repeated number in above array
+      let num=5;
+      let count1=0;
+      for(let i=0;i<array1.length;i++){
+        if(array1[i]==num){
+         count1+=1
+        }
+      }
+     document.write(num+" number is repeated by "+count1+" times")
+
+     document.write("<br>")
+
+    //  find the largest number in array
+
+    let max = array1[0]
+
+    for(let i=0;i<array1.length;i++){
+        if(array1[i]>max){
+            max = array1[i]
+        }
+    }
+    document.write(" This is a max number in this array "+max)
+
+     document.write("<br>")
+
+        //  find the smallest number in array
+
+        let small = array1[0]
+
+    for(let i=0;i<array1.length;i++){
+        if(array1[i]<small){
+            small = array1[i]
+        }
+    }
+    document.write(small+" is a small number in this array ")
+    document.write("<br>")
+
+    // find the length in this array
+
+    let count=0
+    for(let i=0;i<array1.length;i++){
+       count++
+    }
+
+    document.write("The length is ",count," in this array")
+
+    // find the total number of element only even number to present in array
+
+    document.write("<br>")
+
+    let evenNum=0;
+    for(let i=0;i<array1.length;i++){
+        if(array1[i]%2==0){
+            evenNum++
+        }
+    //    num2+=array1[i]
+    }
+    document.write(evenNum," is total number of even ")
+
+
+      // find the total number of element only Odd number to present in array=
+      
+      document.write("<br>")
+
+        let evenOdd=0;
+        for(let i=0;i<array1.length;i++){
+            if(array1[i]%2!==0){
+                evenOdd++
+            }
+        //    num2+=array1[i]
+        }
+        document.write(evenOdd," is total number of Odd number ")
+
+        document.write("<br>")
+
+        let totalSum=0;
+        for(let i=0;i<array1.length;i++){
+            totalSum+=array1[i]
+        }
+        document.write("Total sum of element in this array : ",totalSum)
+
+        document.write("<br>")
+
+        // find the total sum of even number in this array
+
+        let totalSumEven =0;
+        for(let i=0;i<array1.length;i++){
+            if(array1[i]%2==0){
+                totalSumEven+=array1[i]
+            }
+        }
+        document.write("total sum of even number in this array: ",totalSumEven)
+
+            document.write("<br>")     
+
+        // find the total sum of even number in this array
+
+        let totalSumOdd =0;
+        for(let i=0;i<array1.length;i++){
+            if(array1[i]%2!==0){
+                totalSumOdd+=array1[i]
+            }
+        }
+        document.write("total sum of Odd number in this array: ",totalSumOdd)
+
+    //    find the total sum of prime number in this array
+    
+    document.write("<br>")
+
+    let sumPrime=0;
+
+    for(let i=0;i<array1.length;i++){
+        if(array1[i]<=1){
+            break
+        }
+        else if(array1[i]>1){
+            if(array1[i]%i!=0){
+                sumPrime+=array1[i]
+                document.write(array1[i])
+            }
+        }
+       
+    }
+    document.write("sum of prime number in this array ",sumPrime)
+    </script>
+</body>
+</html>
